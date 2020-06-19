@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Time By Key</string>
+    <string name="action_settings">Find by key</string>
+
+    <string name="editar">editar</string>
+    <string name="excluir">Excluir</string>
+    <string name="descricao">Descrição</string>
+    <string name="Início" />
+    <string name="inicio">Início</string>
+    <string name="Fim">Fim</string>
+    <string name="salvar">Salvar</string>
+    <string name="horas">Horas</string>
+    <string name="minutos">Minutos</string>
+    <string name="dia">Dia</string>
+    <string name="mes">Mês</string>
+    <string name="ano">Ano</string>
+</resources>

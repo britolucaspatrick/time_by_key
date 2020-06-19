@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/ini_horas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/horas"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/ini_minutos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/minutos"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/ini_dia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/dia"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/ini_mes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/mes"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/init_ano"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/ano"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="112dp"
+                android:layout_height="56dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/salvar" />
+        </LinearLayout>
+    </ScrollView>
+
