@@ -26,4 +26,6 @@ interface TimeByKeyDao {
     @Update
     suspend fun update(categoria: TimeByKey)
 
+    @Query("SELECT * FROM timebykey WHERE key_time = :key_param AND st_registro != 'C' ")
+    suspend fun allTimeByKey(key_param: String): List<TimeByKey>
 }

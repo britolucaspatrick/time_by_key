@@ -8,7 +8,7 @@ import java.util.*
 @TypeConverters(Converters::class)
 data class TimeByKey(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
-    @ColumnInfo(name = "key") var key: String,
+    @ColumnInfo(name = "key_time") var key_time: String,
     @ColumnInfo(name = "inicio") var inicio: Date?,
     @ColumnInfo(name = "fim") var fim: Date?,
     @ColumnInfo(name = "st_registro") var st_registro: String

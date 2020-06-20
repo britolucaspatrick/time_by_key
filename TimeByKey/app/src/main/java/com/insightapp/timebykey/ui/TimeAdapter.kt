@@ -1,16 +1,17 @@
-package com.insightapp.timebykey
+package com.insightapp.timebykey.ui
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.insightapp.timebykey.R
 import com.insightapp.timebykey.entity.TimeByKey
 import kotlinx.android.synthetic.main.item.view.*
 
 class TimeAdapter internal constructor(
     context: Context,
-    itemSelectedListener:ItemSelectedListener
+    itemSelectedListener: ItemSelectedListener
 ) : RecyclerView.Adapter<TimeAdapter.TimeViewHolder>() {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
@@ -25,13 +26,17 @@ class TimeAdapter internal constructor(
 
     interface ItemSelectedListener {
         fun onItemSelectedDel(item: TimeByKey)
-        fun onItemSelectedAlt(item: TimeByKey)
+        fun onItemSelectedDateEnd(item: TimeByKey)
+        fun onItemSelectedDateStart(item: TimeByKey)
     }
 
     inner class TimeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val descr  = itemView.descricao
-        val btn_edit = itemView.btn_edit
-        val btn_del = itemView.btn_del
+        val key  = itemView.key_time
+        val desc_date_start = itemView.date_start
+        val desc_date_end = itemView.date_end
+        val btn_date_end = itemView.btn_date_end
+        val btn_date_del = itemView.btn_date_del
+        val btn_date_start = itemView.btn_date_start
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TimeViewHolder {
@@ -43,15 +48,20 @@ class TimeAdapter internal constructor(
 
     override fun onBindViewHolder(holder: TimeViewHolder, position: Int) {
         val current = times[position]
-        holder.descr.text = current.key + " " + current.inicio + " " + current.fim
+        holder.key.text = current.key_time
+        holder.desc_date_start.text = current.inicio?.toString()
+        holder.desc_date_end.text = current.fim?.toString()
 
-
-        holder.btn_del.setOnClickListener {
+        holder.btn_date_del.setOnClickListener {
             itemSelectedListener.onItemSelectedDel(current)
         }
 
-        holder.btn_edit.setOnClickListener {
-            itemSelectedListener.onItemSelectedAlt(current)
+        holder.btn_date_end.setOnClickListener {
+            itemSelectedListener.onItemSelectedDateEnd(current)
+        }
+
+        holder.btn_date_start.setOnClickListener {
+            itemSelectedListener.onItemSelectedDateStart(current)
         }
     }
 

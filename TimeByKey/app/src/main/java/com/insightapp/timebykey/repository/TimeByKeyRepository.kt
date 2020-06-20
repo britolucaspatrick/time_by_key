@@ -4,7 +4,9 @@ import androidx.lifecycle.LiveData
 import com.insightapp.timebykey.dao.TimeByKeyDao
 import com.insightapp.timebykey.entity.TimeByKey
 
-class TimeByKeyRepository (private val timeByKeyDao: TimeByKeyDao) {
+class TimeByKeyRepository(
+    private var timeByKeyDao: TimeByKeyDao
+) {
 
     val allTimeByKey: LiveData<List<TimeByKey>> = timeByKeyDao.getAll()
 
@@ -20,5 +22,8 @@ class TimeByKeyRepository (private val timeByKeyDao: TimeByKeyDao) {
         timeByKeyDao.update(timeByKey)
     }
 
+    suspend fun allTimesByParamKey(key: String): List<TimeByKey>{
+        return timeByKeyDao.allTimeByKey(key)
+    }
 
 }

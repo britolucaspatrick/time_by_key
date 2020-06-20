@@ -14,4 +14,7 @@
     <string name="dia">Dia</string>
     <string name="mes">Mês</string>
     <string name="ano">Ano</string>
+    <string name="key">Key</string>
+    <string name="date_ini">Data início</string>
+    <string name="data_im">Data fim</string>
 </resources>
