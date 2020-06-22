@@ -1,0 +1,8 @@
+
+TimeByKey/app/google-services.json
+TimeByKey/app/build.gradle
+*.gradle
+*.aab
+*.apk
+*.gradle
+*.pepk
